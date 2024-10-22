@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    container_name: "java-app"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      db-url: jdbc:postgresql://database:5432/cat_db
+
+  database:
+    container_name: "database"
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=toor
+      - POSTGRES_USER=root
+      - POSTGRES_DB=cat_db
