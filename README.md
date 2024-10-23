@@ -26,3 +26,5 @@ E.g. `&order=-dateOfBirth`. For ascending order, field name is without leading `
 `color` (not blank + longer than 2 characters), `dateOfBirth` (not blank, present day or a day in the past).
 `age` will be calculated on the go, because this field is dynamic, meaning it will have to be changed each year, which is not
 a good practice, when we have dateOfBirth and age can be easily calculated on-the-go.
+
+If you have any questions regarding this program, feel free to contact me via email: gvt488@gmail.com.
